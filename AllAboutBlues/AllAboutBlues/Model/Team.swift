@@ -6,14 +6,14 @@
 //  Copyright © 2020 Soohan Lee. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Team {
   var name: String
   var shortName: String
   var stadium: String
   var squad: Squad
-  var logo: UIImage
+  var logoURL: String
   let foundingDate: Int
 }
 
@@ -24,7 +24,7 @@ extension Team {
     shortName: \(shortName)
     stadium: \(stadium)
     squad: \(squad)
-    logo: \(logo)
+    logo: \(logoURL)
     foundingDate: \(foundingDate)
     """
   }
