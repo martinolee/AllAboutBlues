@@ -23,26 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   fileprivate func setupRootViewController() {
     window = UIWindow(frame: UIScreen.main.bounds)
     
-    let rootViewController = TeamViewController()
+    let rootViewController = BluesTabBarController()
     
     window?.rootViewController = rootViewController
     window?.makeKeyAndVisible()
-  }
-  
-  private func loadData() {
-    let service: ServiceType = Service()
-    
-    // Chelsea ID is 61
-    service.fetchTeamData(teamID: 61) { result in
-      DispatchQueue.main.async {
-        switch result {
-        case .success(let team):
-          print(team)
-        case .failure(let error):
-          print(error)
-        }
-      }
-    }
   }
 
 }
