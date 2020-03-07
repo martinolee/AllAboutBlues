@@ -11,6 +11,7 @@ import Foundation
 struct Team {
   var name: String
   var shortName: String
+  var tla: String
   var stadium: String
   var squad: Squad
   var logoURL: String
