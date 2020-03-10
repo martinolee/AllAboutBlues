@@ -17,3 +17,5 @@ extension Identifiable {
 }
 
 extension UITableViewCell: Identifiable { }
+
+extension UITableViewHeaderFooterView: Identifiable { }

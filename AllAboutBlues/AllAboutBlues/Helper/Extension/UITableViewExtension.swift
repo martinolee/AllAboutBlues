@@ -23,4 +23,19 @@ extension UITableView {
       fatalError("Identifier required")
     }
   }
+  
+  func register<Header>(
+    header: Header.Type,
+    forHeaderFooterViewReuseIdentifier reuseIdentifier: String = Header.identifier
+  ) where Header: UITableViewHeaderFooterView {
+    register(header, forHeaderFooterViewReuseIdentifier: reuseIdentifier)
+  }
+  
+  func dequeue<Header>(_ reusableCell: Header.Type) -> Header where Header: UITableViewHeaderFooterView {
+    if let header = dequeueReusableHeaderFooterView(withIdentifier: reusableCell.identifier) as? Header {
+      return header
+    } else {
+      fatalError("Identifier required")
+    }
+  }
 }
